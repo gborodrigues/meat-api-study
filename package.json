@@ -1,0 +1,26 @@
+{
+  "name": "meat-api-study",
+  "version": "1.0.0",
+  "description": "Resturant api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gborodrigues/meat-api-study.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gborodrigues/meat-api-study/issues"
+  },
+  "homepage": "https://github.com/gborodrigues/meat-api-study#readme",
+  "dependencies": {
+    "restify": "6.3.4"
+  },
+  "devDependencies": {
+    "@types/restify": "5.0.6"
+  }
+}
