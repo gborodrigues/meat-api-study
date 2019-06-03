@@ -1,0 +1,25 @@
+version: "3"
+services:
+  challenge-cli-node:
+    image: "node:10.15.3-alpine"
+    container_name: challenge-cli-node
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: npm run start
+    networks:
+      - challenge-cli
+  challenge-cli-nginx:
+    container_name: challenge-cli-nginx
+    build: ./docker/nginx/
+    ports:
+      - 8080:8080
+    networks:
+      - challenge-cli
+    depends_on:
+      - challenge-cli-node
+networks:
+  challenge-cli:
+    driver: bridge
